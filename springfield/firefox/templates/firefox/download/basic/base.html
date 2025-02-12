@@ -6,12 +6,9 @@
 
 {% extends "base-protocol.html" %}
 
-{% block page_title_prefix %}{{ ftl('firefox-new-download-browser', fallback='firefox-new-download-firefox') }} — {% endblock %}
-
-{%- block page_title -%}{{ ftl('firefox-new-fast', fallback='firefox-new-free-web-browser') }}{%- endblock -%}
-
 {# Bug 1438302 Avoid duplicate content for en-CA and en-GB pages. #}
-{%- block page_title_suffix -%}
+{%- block page_title -%}
+  {{ ftl('firefox-new-download-browser', fallback='firefox-new-download-firefox') }} — {{ ftl('firefox-new-fast', fallback='firefox-new-free-web-browser') }}
   {% if LANG == 'en-CA' %}
     — from Mozilla (CA)
   {% elif LANG == 'en-GB' %}

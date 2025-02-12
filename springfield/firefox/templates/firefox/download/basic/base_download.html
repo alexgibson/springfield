@@ -21,8 +21,7 @@
 {% set og_desc = og_desc or ftl('firefox-new-desc', fallback='firefox-new-faster-page-loading-less-memory') %}
 
 {# page title #}
-{%- block page_title_prefix -%}{{ meta_title_prefix }}{%- endblock -%}
-{% block page_title %} — {{ meta_title }} {% endblock %}
+{% block page_title %}{{ meta_title_prefix }} — {{ meta_title }}{% endblock %}
 {% block page_desc %}{{ meta_desc }}{% endblock %}
 {% block page_og_title %}{{ og_title }}{% endblock %}
 {% block page_og_desc %}{{ og_desc }}{% endblock %}
